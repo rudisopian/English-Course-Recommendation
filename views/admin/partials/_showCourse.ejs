@@ -1,0 +1,16 @@
+<% for(var i = 0; i < courses.length; i++) { %>
+    <tr>
+        <td><%= i + 1 %></td>
+        <td><%= courses[i].name %></td>
+        <td><%= courses[i].description %></td>
+        <td>
+            <a href="/admin/courses/update-course?id=<%= courses[i]._id%>" class="btn border update">
+                <span class="text-gradient"><i class='fas fa-pencil-alt'></i></span>
+            </a>
+            <a class="btn border delete" data-id=<%= courses[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
+    

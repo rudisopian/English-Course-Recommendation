@@ -1,0 +1,17 @@
+<% for(var i = 0; i < subcriterias.length; i++) { %>
+    <tr>
+        <td class="text-center"><%= i + 1 %></td>
+        <td><%= subcriterias[i].name %></td>
+        <td class="text-center"><%= subcriterias[i].criteriaId.name %></td>
+        <td class="text-center"><%= subcriterias[i].weight %></td>
+        <td class="text-center">
+            <a href="/admin/subcriterias/update-subcriteria?id=<%= subcriterias[i]._id%>" class="btn border update">
+                <span class="text-gradient"><i class='fas fa-pencil-alt'></i></span>
+            </a>
+            <a class="btn border delete" data-id=<%= subcriterias[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
+    

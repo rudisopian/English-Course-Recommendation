@@ -1,0 +1,28 @@
+ <!-- form handling -->
+ <form action="/api/subcriterias" method="POST" id="add_subcriteria">
+    <div class="new_subcriteria">
+        <div class="form-group">
+            <label for="name" class="text-dark">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="weight" class="text-dark">Weight</label>
+            <input type="text" name="weight" value="" placeholder="Weight">
+        </div>
+        <div class="form-group">
+            <label for="criteria" class="text-dark">Criteria</label>
+            <select name="criteriaId" class="form-control" id="">
+                <% for(var i = 0; i < criterias.length; i++) { %>
+                <option value="<%= criterias[i]._id %>"><%= criterias[i].name %></option>
+                <% } %>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn update">Save</button>
+        </div>
+
+    </div>
+</form> 
+

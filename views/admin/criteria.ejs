@@ -1,0 +1,40 @@
+
+<!-- include header -->
+<%- include('partials/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="text-center"><h1>Criteria Page</h1></div>
+            <div class="box-nav d-flex justify-between">
+                <a href="/admin/criterias/add-criteria" class="border-shadow asd">
+                    <span class="text-gradient">New Criteria</span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Weight</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('partials/_showCriteria') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('partials/_footer') %>
+<!-- /include footer -->

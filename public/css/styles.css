@@ -1,0 +1,281 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 120px;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 20px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn{
+  border-radius: 36px;
+  background: #FEE996;
+}
+.btn-center{
+  margin: auto;
+}
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.asd {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #696862;
+  border-radius: 12px;
+  padding: 3px 10px;
+  transition-duration: 0.4s;
+}
+.asd:hover {
+  background-color: #FEE996; 
+  color: #696862;
+}
+.qwe {
+  width: 480;
+}
+form{
+  width: 1024px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 100%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+button{
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #FEE996;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 250px;
+  margin-right: 40px;
+}
+header h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.recipes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80PX AUTO;
+  max-width: 1200px;
+}
+.recipe{
+  display: inline-block;
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px
+}
+.recipe img{
+  width: 100px;
+  margin: -30px auto 20px;
+}
+footer{
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+
+/*
+* ADDITION
+*/
+
+:root{
+  --dark: #2b2d42;
+  --light: #adb5bd;
+  --border: #dee2e6;
+  --border-btn: #edf2f4;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 720px){
+  table, thead, tbody, th, td, tr{
+      display: block;
+  }
+
+  thead tr{
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+  }
+
+  tr { border: 1px solid var(--border);}
+
+  td{
+      border: none;
+      position: relative;
+  }
+
+}
+/* HERE WE GO */
+
+.new_user,
+.new_criteria,
+.new_subcriteria,
+.new_course,
+.assessment{
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_user .form-group,
+#add_user .form-group,
+#update_criteria .form-group,
+#update_subcriteria .form-group,
+#update_course .form-group,
+#add_criteria .form-group,
+#add_subcriteria .form-group,
+#add_course .form-group,
+#assessment .form-group{
+    margin: 1em 0;
+}
+
+#update_user .form-group input[type="text"],
+#add_user .form-group input[type="text"],
+#update_criteria .form-group input[type="text"],
+#update_subcriteria .form-group input[type="text"],
+#add_criteria .form-group input[type="text"],
+#update_course .form-group input[type="text"],
+#add_course .form-group input[type="text"],
+#add_subcriteria .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+
+#update_user .form-group .radio,
+#add_user .form-group .radio,
+#update_criteria .form-group .radio,
+#update_subcriteria .form-group .radio,
+#add_criteria .form-group .radio,
+#add_subcriteria .form-group .radio,
+#update_course .form-group .radio,
+#add_course .form-group .radio{
+    margin: 1em 2em;
+}
+
+#update_user .form-group .btn,
+#add_user .form-group .btn,
+#update_criteria .form-group .btn,
+#update_subcriteria .form-group .btn,
+#add_criteria .form-group .btn,
+#add_subcriteria .form-group .btn,
+#update_course .form-group .btn,
+#add_course .form-group .btn
+{
+    width: 100%;
+    padding: .9em 1em;
+    background-color:#FEE996; 
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#assessment .form-group .btn{
+  padding-top: 10px;
+}
+
+#update_user .form-group .btn:hover,
+#add_user .form-group .btn:hover,
+#update_criteria .form-group .btn:hover,
+#add_criteria .form-group .btn:hover,
+#add_subcriteria .form-group .btn:hover,
+#update_subcriteria .form-group .btn:hover,
+#add_course .form-group .btn:hover,
+#update_course .form-group .btn:hover{
+    background-color: #2b2d42;
+    color: #ddd;
+}

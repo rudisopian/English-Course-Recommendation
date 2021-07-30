@@ -1,0 +1,76 @@
+<!-- include header -->
+<%- include('partials/header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+
+<main id="site-main">
+  <div class="container table-responsive py-5">
+    <div class="form-title text-center"><h1>Do a Self-Assessment!</h1></div>
+    <!-- form handling -->
+    <form action="" method="POST" id="assessment">
+      <div class="assessment">
+        <div class="form-group">
+          <label for="subcriteria" class="text-dark">Listening</label>
+          <select name="listeningId" class="form-control" id="">
+            <% for(var i = 0; i < listeningSC.length; i++) { %>
+            <option value="<%= subcriterias[i]._id %>">
+              <%= i + 1 %> - <%= listeningSC[i].name %>
+            </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subcriteria" class="text-dark">Reading</label>
+          <select name="readingId" class="form-control" id="">
+            <% for(var i = 0; i < readingSC.length; i++) { %>
+            <option value="<%= subcriterias[i]._id %>">
+              <%= i + 1 %> - <%= readingSC[i].name %>
+            </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subcriteria" class="text-dark">Spoken Interaction</label>
+          <select name="spokenInteractionId" class="form-control" id="">
+            <% for(var i = 0; i < spokenInteractionSC.length; i++) { %>
+            <option value="<%= subcriterias[i]._id %>">
+              <%= i + 1 %> - <%= spokenInteractionSC[i].name %>
+            </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subcriteria" class="text-dark">Spoken Production</label>
+          <select name="spokenProductionId" class="form-control" id="">
+            <% for(var i = 0; i < spokenProductionSC.length; i++) { %>
+            <option value="<%= subcriterias[i]._id %>">
+              <%= i + 1 %> - <%= spokenProductionSC[i].name %>
+            </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subcriteria" class="text-dark">Writing</label>
+          <select name="writingId" class="form-control" id="">
+            <% for(var i = 0; i < writingSC.length; i++) { %>
+            <option value="<%= subcriterias[i]._id %>">
+              <%= i + 1 %> - <%= writingSC[i].name %>
+            </option>
+            <% } %>
+          </select>
+        </div>
+
+        <div class="form-group btn-save">
+          <button type="submit" class="btn-center">Save</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('partials/footer') %>
+<!-- /include footer -->

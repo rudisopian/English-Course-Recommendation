@@ -1,0 +1,28 @@
+
+<!-- include header -->
+<%- include('partials/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/admin/criterias"><i class="fas fa-angle-double-left"></i> All Criterias</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">New Criteria</h2>
+            <span class="text-dark">Use the below form to create a new criteria</span>
+        </div>
+
+        <!-- add user form -->
+        <%- include('partials/_formCriteria') %>
+       
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('partials/_footer') %>
+<!-- /include footer -->

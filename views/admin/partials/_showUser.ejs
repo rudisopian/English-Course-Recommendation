@@ -1,0 +1,16 @@
+<% for(var i = 0; i < users.length; i++) { %>
+    <tr>
+        <td class="text-center"><%= i + 1 %></td>
+        <td><%= users[i].name %></td>
+        <td class="text-center"><%= users[i].email %></td>
+        <td class="text-center">
+            <a href="/admin/users/update-user?id=<%= users[i]._id%>" class="btn border update">
+                <span class="text-gradient"><i class='fas fa-pencil-alt'></i></span>
+            </a>
+            <a class="btn border delete" data-id=<%= users[i]._id%> >
+                <span class="text-gradient"><i class="fas fa-times"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>
+    

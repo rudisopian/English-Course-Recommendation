@@ -1,0 +1,39 @@
+
+<!-- include header -->
+<%- include('partials/_header') %>
+<!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="text-center"><h1>User Page</h1></div>
+            <div class="box-nav d-flex justify-between">
+                <a href="/admin/users/add-user" class="border-shadow asd">
+                    <span class="text-gradient">New User</span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('partials/_showUser') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('partials/_footer') %>
+<!-- /include footer -->
