@@ -7,6 +7,7 @@ const subcriteriaController = require('../controllers/subcriteriaController')
 const courseController = require('../controllers/courseController');
 const userController = require('../controllers/userController')
 const calculateController = require('../controllers/calculation')
+const calculateAdmin = require('../controllers/calculationAdmin')
 
 const route = Router();
 
@@ -19,6 +20,7 @@ route.get('/', services.home)
 route.get('/smoothies', requireAuth, services.smoothies)
 // ASSESSMENT
 route.get('/assessment', requireAuth, services.assessment)
+route.get('/course', services.course)
 
 // AUTH
 route.get('/signup', Auth.signup_get);
@@ -45,6 +47,9 @@ route.get('/admin/courses/update-course', requireAuth, services.update_course)
 route.get('/admin/users', requireAuth, services.userRoutes)
 route.get('/admin/users/add-user', requireAuth, services.add_user)
 route.get('/admin/users/update-user', requireAuth, services.update_user)
+// Calculate Admin
+route.get('/admin/calculates', requireAuth, services.calculateRoutes)
+
 
 /*===================================
 *======     A     P     I     =======
@@ -71,6 +76,7 @@ route.get('/api/users', userController.find);
 route.put('/api/users/:id', userController.update);
 route.delete('/api/users/:id', userController.delete);
 
-route.post('/api/calculate', calculateController.calculate)
+route.post('/api/calculate', calculateController.calculateUser)
+route.get('/api/calculateAdmin', calculateAdmin.calculateAdmin)
 
 module.exports = route;

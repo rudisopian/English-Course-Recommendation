@@ -22,7 +22,7 @@ exports.indexRoutes = (req, res) => {
             res.send(err);
         })
 }
-exports.course = (req, res) => {
+exports.index = (req, res) => {
     // Make a get request to /api/courses
     axios.get('http://localhost:5000/api/courses')
         .then(function(response){
@@ -65,9 +65,23 @@ exports.assessment = (req, res) => {
         })
 }
 
+exports.course = (req, res) => {
+    // Make a get request to /api/courses
+    let payload = { listening: req.query.listening, 
+        reading: req.query.reading,
+        spokenInteraction: req.query.spokenInteraction,
+        spokenProduction : req.query.spokenProduction,
+        writing : req.query.writing
+    };
+    axios.post('http://localhost:5000/api/calculate', payload)
+        .then(function(response){
+            res.render('course', {courseData : response.data });
+        })
+}
 /*===================================
 **===== A D M I N  R E N D E R ======
 *===================================*/
+
 // DASHBOARD
 exports.dashboardRoutes = (req, res) =>{
     res.render('./admin/dashboard');
@@ -198,4 +212,17 @@ exports.update_user = (req, res) =>{
         .catch(err =>{
             res.send(err);
         })
+}
+// Calculate
+exports.calculateRoutes = (req, res) => {
+    // Make a get request to /api/user
+    axios.get('http://localhost:5000/api/calculateAdmin')
+        .then(function(response){
+            res.render('./admin/calculate', { 
+                calculates : response.data,
+            });
+        })
+        .catch(err =>{
+            res.send(err);
+        })  
 }

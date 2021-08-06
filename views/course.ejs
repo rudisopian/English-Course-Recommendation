@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+<% for(var i = 0; i < courseData.length; i++) { %>
+<ul class="recipes">
+  <li class="recipe">
+    <img src="img/img.jpeg" alt="img">
+    <h4><%= courseData[i].name %></h4>
+    <p><%= courseData[i].description %></p>
+  </li>
+</ul>
+<% } %>
+
+<%- include('partials/footer'); -%>

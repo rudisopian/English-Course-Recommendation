@@ -1,0 +1,40 @@
+
+<!-- include header -->
+<%- include('partials/_header') %>
+<!-- /include header -->
+
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="text-center">
+                <h1>Calculate Page</h1>
+                <h2>Normalization</h2>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr class="text-center">
+                            <th>ID</th>
+                            <th>Listening</th>
+                            <th>Reading</th>
+                            <th>Spoken Interaction</th>
+                            <th>Spoken Production</th>
+                            <th>Writing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('partials/_showCalculate') %>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+<!-- /Main Site -->
+
+
+<!-- include footer -->
+<%- include('partials/_footer') %>
+<!-- /include footer -->
